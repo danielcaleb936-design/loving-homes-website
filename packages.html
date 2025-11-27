@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Packages - Loving Homes</title>
+  <style>
+    /* ===== Global Styles ===== */
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f8ff;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* ===== Header (Matches Home + Reviews + Facilities) ===== */
+    header {
+      background: linear-gradient(90deg, #0077cc, #00bfff, #00e6b8);
+      color: white;
+      padding: 18px 0;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 90%;
+      margin: auto;
+    }
+
+    .logo {
+      font-size: 2em;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      color: #fff9c4;
+      text-shadow: 0 0 6px #fff;
+    }
+
+    /* ===== Hero Section ===== */
+    .hero {
+      background-image: url('https://m1muzammil.github.io/Animals/dog.jpeg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      padding: 80px 20px;
+      color: white;
+      text-align: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.45);
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    .hero a {
+      color: #ffd700;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    /* ===== Package Cards ===== */
+    .package-cards {
+      width: 85%;
+      margin: 50px auto 20px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0, 87, 184, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: left;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 87, 184, 0.2);
+    }
+
+    .card h3 {
+      color: #0057b8;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      border-left: 4px solid #00bfff;
+      padding-left: 10px;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 15px;
+    }
+
+    .card ul li {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 10px;
+    }
+
+    .card ul li::before {
+      content: "🐾";
+      position: absolute;
+      left: 0;
+      color: #00bfff;
+    }
+
+    /* ===== Calculator Section ===== */
+    .calculator {
+      width: 85%;
+      margin: 40px auto 60px auto;
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 6px 20px rgba(0,87,184,0.1);
+      text-align: center;
+    }
+
+    .calculator h2 {
+      color: #0057b8;
+      margin-bottom: 15px;
+    }
+
+    .calculator select {
+      padding: 10px 15px;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid #00bfff;
+      margin-top: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .calculator select:hover {
+      transform: scale(1.05);
+    }
+
+    .calculator p {
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+
+    .calculator strong {
+      color: #00bfff;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: linear-gradient(90deg, #00bfff, #00e6b8);
+      color: white;
+      text-align: center;
+      padding: 25px 0;
+      margin-top: 60px;
+      box-shadow: 0 -4px 12px rgba(0,0,0,0.2);
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .card {
+        text-align: center;
+      }
+
+      .card ul li {
+        padding-left: 0;
+      }
+
+      .card ul li::before {
+        display: none;
+      }
+
+      .calculator select {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">🐕 Loving Homes</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+        <li><a href="packages.html" style="font-weight:700; text-decoration:underline;">Packages</a></li>
+        <li><a href="about us.html">About Us</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Choose the Perfect Package for Your Pooch</h1>
+      <p>We offer a range of packages to suit every dog's needs. Can't find what you're looking for? <a href="contact.html">Contact us</a> for custom options.</p>
+    </div>
+  </section>
+
+  <div class="package-cards">
+    <div class="card">
+      <h3>Premium Package</h3>
+      <p>The ultimate experience for the discerning dog.</p>
+      <ul>
+        <li>Four walks/activities per day</li>
+        <li>Access to private grass area</li>
+        <li>Daily updates and photos sent to you</li>
+        <li>Treats (as agreed with owner)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Classic Package</h3>
+      <p>Our most popular all-inclusive package.</p>
+      <ul>
+        <li>Three walks/activities per day</li>
+        <li>Indoor play barn access</li>
+        <li>Relaxation time in our zen zone</li>
+        <li>One professional grooming session</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Day Package</h3>
+      <p>Perfect for when you're out for the day.</p>
+      <ul>
+        <li>Two walks per day</li>
+        <li>Playtime in the external play area</li>
+        <li>Access to the agility track</li>
+        <li>Fun in the sand digging pit</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== Calculator Section ===== -->
+  <section class="calculator">
+    <h2>Package Price Calculator</h2>
+    <p>Select a package to see the estimated cost per day:</p>
+    <select id="package-select">
+      <option value="premium">Premium Package</option>
+      <option value="classic">Classic Package</option>
+      <option value="day">Day Package</option>
+    </select>
+    <p>Estimated Price: <strong id="price-output">₨0</strong></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Loving Homes. All rights reserved. 🐾</p>
+  </footer>
+
+  <script>
+    const packageSelect = document.getElementById('package-select');
+    const priceOutput = document.getElementById('price-output');
+
+    const packagePrices = {
+      premium: 1200,
+      classic: 900,
+      day: 500
+    };
+
+    packageSelect.addEventListener('change', () => {
+      const selected = packageSelect.value;
+      priceOutput.textContent = `₨${packagePrices[selected]}`;
+    });
+
+    // Set default price
+    priceOutput.textContent = `₨${packagePrices[packageSelect.value]}`;
+  </script>
+</body>
+</html>

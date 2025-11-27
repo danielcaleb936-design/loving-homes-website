@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Loving Homes</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #222;
+            background: url('https://th.bing.com/th/id/R.b654c0106faab59623af7378386bd4f8?rik=1qsS1emgzMIsZg&riu=http%3a%2f%2feskipaper.com%2fimages%2fdogs-20.jpg&ehk=n5Q2ZvLLp1%2bMi%2fIekbgo0poDIki2GtSEUjfluKglN1E%3d&risl=&pid=ImgRaw&r=0.jpg') center/cover fixed no-repeat;
+            background-blend-mode: lighten;
+        }
+
+        header {
+            background: linear-gradient(90deg, #0077cc, #00bfff, #00e6b8);
+            color: white;
+            padding: 18px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            margin: auto;
+        }
+
+        .logo {
+            font-size: 2em;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #fff9c4;
+            text-shadow: 0 0 6px #fff;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 100, 255, 0.55), rgba(0, 200, 255, 0.55)),
+                        url('https://images.pexels.com/photos/257540/pexels-photo-257540.jpeg?cs=srgb&dl=pexels-pixabay-257540.jpg&fm=jpg') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 130px 20px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+        }
+
+        .hero p {
+            font-size: 1.4em;
+        }
+
+        main section {
+            width: 80%;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(4px);
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            transition: 0.3s ease;
+        }
+
+        h2 {
+            color: #0077cc;
+            border-bottom: 4px solid #00bfff;
+            display: inline-block;
+            padding-bottom: 6px;
+            font-size: 1.8em;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 18px rgba(0,128,255,0.3);
+        }
+
+        .team {
+            text-align: center;
+        }
+
+        .team img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            text-align: center;
+            background: linear-gradient(90deg, #00bfff, #00e6b8);
+            color: white;
+            padding: 25px 0;
+            margin-top: 60px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            main section {
+                width: 90%;
+            }
+
+            .hero h1 {
+                font-size: 2.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">🐕 Loving Homes</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="facilities.html">Facilities</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="faq.html" style="font-weight:700; text-decoration:underline;">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="hero">
+        <h1>About Loving Homes</h1>
+        <p>Where Comfort, Safety & Happiness Come First</p>
+    </section>
+
+    <section>
+        <h2>Our Story</h2>
+        <p>Loving Homes began with one mission: to create a luxury, safe, and heartwarming environment for every dog. We believe every pup deserves a place where they feel loved, relaxed, and excited to return.
+        From our humble beginnings to becoming Hong Kong’s most trusted dog hotel, we continue to raise the standards of canine care.</p>
+    </section>
+
+    <section>
+        <h2>What Makes Us Special?</h2>
+        <div class="about-grid">
+            <div class="card">
+                <h3>Personalized Care</h3>
+                <p>Each dog receives a custom care plan tailored to their personality, habits, and comfort level.</p>
+            </div>
+
+            <div class="card">
+                <h3>Luxury Environment</h3>
+                <p>Our vibrant suites, play areas, and grooming spa offer comfort and excitement in every corner.</p>
+            </div>
+
+            <div class="card">
+                <h3>Safety First</h3>
+                <p>24/7 monitoring, trained handlers, and strict health standards keep your pup safe and happy.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Meet Our Team</h2>
+        <div class="about-grid team">
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Team Member">
+                <h3>Anna</h3>
+                <p>Head Caregiver</p>
+            </div>
+
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Team Member">
+                <h3>Omar</h3>
+                <p>Fitness & Play Coordinator</p>
+            </div>
+
+            <div class="card">
+                <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Team Member">
+                <h3>Sam</h3>
+                <p>Client Support Specialist</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Our Values</h2>
+        <div class="about-grid">
+            <div class="card">
+                <h3>Compassion</h3>
+                <p>We treat every dog with patience, understanding, and genuine love—just like family.</p>
+            </div>
+
+            <div class="card">
+                <h3>Trust</h3>
+                <p>We are committed to providing a safe, transparent environment where owners feel confident leaving their pups in our care.</p>
+            </div>
+
+            <div class="card">
+                <h3>Quality</h3>
+                <p>From our facilities to our staff, we uphold high standards to ensure top‑level comfort, safety, and happiness.</p>
+            </div>
+
+            <div class="card">
+                <h3>Joy</h3>
+                <p>We create an uplifting atmosphere filled with fun, play, enrichment, and positive experiences for every dog.</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 Loving Homes. All rights reserved. 🐾</p>
+</footer>
+
+</body>
+</html>

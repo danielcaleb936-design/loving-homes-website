@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Facilities - Loving Homes</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #222;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat fixed;
+      background-blend-mode: lighten;
+    }
+
+    /* ===== Header (unchanged) ===== */
+    header {
+      background: linear-gradient(90deg, #0077cc, #00bfff, #00e6b8);
+      color: white;
+      padding: 18px 0;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 90%;
+      margin: auto;
+    }
+
+    .logo {
+      font-size: 2em;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      color: #fff9c4;
+      text-shadow: 0 0 6px #fff;
+    }
+
+    /* ===== Unique Facilities Page Design ===== */
+    main {
+      width: 90%;
+      margin: 40px auto;
+    }
+
+    .facility-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .facility-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      padding: 30px 20px;
+      box-shadow: 0 8px 20px rgba(0, 87, 184, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(4px);
+    }
+
+    .facility-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0, 87, 184, 0.2);
+    }
+
+    .facility-card img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+    }
+
+    .facility-card h2 {
+      font-size: 1.5rem;
+      color: #0057b8;
+      margin-bottom: 10px;
+    }
+
+    .facility-card p, .facility-card ul {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .facility-card ul {
+      padding-left: 20px;
+      text-align: left;
+    }
+
+    .facility-card ul li::before {
+      content: "🐾";
+      margin-right: 8px;
+    }
+
+    footer {
+      text-align: center;
+      background: linear-gradient(90deg, #00bfff, #00e6b8);
+      color: white;
+      padding: 25px 0;
+      margin-top: 50px;
+      box-shadow: 0 -3px 10px rgba(0,0,0,0.15);
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .facility-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header stays the same -->
+  <header>
+    <nav>
+      <div class="logo">🐕 Loving Homes</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="facilities.html" style="font-weight:700; text-decoration:underline;">Facilities</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="about us.html">About Us</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Facilities Content -->
+  <main>
+    <div class="facility-grid">
+      <div class="facility-card">
+        <img src="https://media.tag24.de/1200x800/e/w/ew4y72tmuh8eghu364r02x57u6je671z.jpg" alt="Luxury Accommodation">
+        <h2>Luxury Accommodation</h2>
+        <p>Our suites include underfloor heating/cooling and relaxing TVs for your dog's comfort.</p>
+      </div>
+
+      <div class="facility-card">
+        <img src="https://img.icons8.com/ios-filled/100/000000/stethoscope.png" alt="Health & Wellness">
+        <h2>Health & Wellness</h2>
+        <ul>
+          <li>Grooming Parlour & Spa</li>
+          <li>24-Hour Veterinary Care</li>
+        </ul>
+      </div>
+
+      <div class="facility-card">
+        <img src="https://media.istockphoto.com/photos/dogs-playing-picture-id481634156?k=6&m=481634156&s=612x612&w=0&h=xsPIPMRBC7faru6ZF6pLAyimsv9ApO6kLb9i2hhKp3s=.jpg" alt="Fun & Activities">
+        <h2>Fun & Activities</h2>
+        <ul>
+          <li>Secure Outdoor Paddocks</li>
+          <li>Woodland Walks & Grass Areas</li>
+          <li>Indoor Play Barn & Agility Track</li>
+        </ul>
+      </div>
+
+      <div class="facility-card">
+        <img src="https://i.pinimg.com/originals/19/ef/57/19ef57d7ad89c7c31fce289937ee57f7.jpg" alt="Premium Services">
+        <h2>Premium Services</h2>
+        <p>Enjoy our chauffeur 'collect and return' service for hassle-free experiences.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Loving Homes. All rights reserved. 🐾</p>
+  </footer>
+</body>
+</html>

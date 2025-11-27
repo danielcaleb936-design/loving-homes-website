@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loving Homes - Reviews</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f8fafc;
+            color: #333;
+        }
+
+        /* SAME HEADER AS HOME PAGE */
+        header {
+            background: linear-gradient(90deg, #0077cc, #00bfff, #00e6b8);
+            color: white;
+            padding: 18px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            margin: auto;
+        }
+
+        .logo {
+            font-size: 2em;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #fff9c4;
+            text-shadow: 0 0 6px #fff;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+            background: url('https://images.unsplash.com/photo-1517849845537-4d257902454a') center/cover no-repeat;
+            color: white;
+            position: relative;
+        }
+        
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.45);
+        }
+        
+        .hero h1, .hero p {
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-top: 10px;
+        }
+
+        /* Reviews */
+        .reviews-section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .reviews-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #0077cc;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .review-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .review-card h3 {
+            margin: 0;
+            font-size: 22px;
+            color: #0077cc;
+        }
+
+        .stars {
+            color: #f7b731;
+            margin: 8px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background: linear-gradient(90deg, #00bfff, #00e6b8);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">🐕 Loving Homes</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="facilities.html">Facilities</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="reviews.html" style="font-weight:700; text-decoration:underline;">Reviews</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>What Our Clients Say</h1>
+    <p>Real experiences from pet parents who trust Loving Homes</p>
+</section>
+
+<section class="reviews-section">
+    <h2>Customer Reviews</h2>
+
+    <div class="reviews-grid">
+
+        <div class="review-card">
+            <h3>Emily & Bella</h3>
+            <div class="stars">★★★★★</div>
+            <p>Bella loved her stay! The staff sent us regular updates and she came home happy and relaxed.</p>
+        </div>
+
+        <div class="review-card">
+            <h3>James & Rocky</h3>
+            <div class="stars">★★★★★</div>
+            <p>Rocky had the best experience! Clean facilities, friendly caretakers, and lots of playtime.</p>
+        </div>
+
+        <div class="review-card">
+            <h3>Sarah & Coco</h3>
+            <div class="stars">★★★★☆</div>
+            <p>Coco enjoyed the outdoor area. Wish we got more photo updates, but still a great stay!</p>
+        </div>
+
+        <div class="review-card">
+            <h3>Ahmed & Luna</h3>
+            <div class="stars">★★★★★</div>
+            <p>Luna felt right at home. The team went above and beyond to make her comfortable.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Loving Homes — Luxury Dog Care 🐾</p>
+</footer>
+
+</body>
+</html>
